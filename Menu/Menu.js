@@ -34,7 +34,7 @@ let menuItems = [
   
 */
 
-function createMenu(array){
+function createMenu(menuItems){
   const menu = document.createElement('div');
   // const ul = document.createElement('ul');
   // const btn = document.querySelector('.menu-button');
@@ -43,11 +43,11 @@ function createMenu(array){
   const itemList = document.createElement('ul');
   menu.appendChild(itemList);
 
-  array.forEach(i => {
+    menuItems.forEach(i => {
     //console.log('fire:');
     const list = document.createElement('li');
     list.textContent = `${i}`;
-    array.appendChild(list);
+    itemList.appendChild(list);
   });
 
   const arrayBtn = document.querySelector('.menu-button');
@@ -60,8 +60,8 @@ return menu;
 
 }
 
-document.querySelector('.header').append(createMenu(array));
-append(MenuCreator(array));
+document.querySelector('.header').append(createMenu(menuItems));
+append(create(menuItems));
 
 // function createMenu(menuItems) {
 //   const menu = document.createElement('div')
