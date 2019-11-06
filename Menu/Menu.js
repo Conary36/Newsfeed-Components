@@ -38,20 +38,20 @@ function createMenu(array){
   const menu = document.createElement('div');
   // const ul = document.createElement('ul');
   // const btn = document.querySelector('.menu-button');
-  menu.classList.add('menu')
+  menu.classList.add('menu');
 
-  const itemList = document.createElement('ul')
-  menu.appendChild(itemList)
+  const itemList = document.createElement('ul');
+  menu.appendChild(itemList);
 
-  array.forEach(i =>{
+  array.forEach(i => {
     //console.log('fire:');
     const list = document.createElement('li');
-    itemList.textContent = `${i}`;
+    list.textContent = `${i}`;
     array.appendChild(list);
   });
 
-const arrayBtn = document.querySelector('.menu-button');
-arrayBtn.addEventListener('click', () => {
+  const arrayBtn = document.querySelector('.menu-button');
+  arrayBtn.addEventListener('click', () => {
   menu.classList.toggle('menu--open');
 });
 
@@ -60,8 +60,8 @@ return menu;
 
 }
 
-document.querySelector('.header').append(createMenu(menuItems));
-append(MenuCreator(menuItems));
+document.querySelector('.header').append(createMenu(array));
+append(MenuCreator(array));
 
 // function createMenu(menuItems) {
 //   const menu = document.createElement('div')
@@ -88,25 +88,5 @@ append(MenuCreator(menuItems));
 // append(MenuCreator(menuItems));
 
 
-// function createMenu(array){
-//   const menu = document.createElement('div');
-//   const ul = document.createElement('ul');
-//   const content1 = document.createElement('li');
-//   const content2 = document.createElement('li');
-//   const content3 = document.createElement('li');
-//   const content4 = document.createElement('li');
-//   const content5 = document.createElement('li');
-//   const content6 = document.createElement('li');
 
-//   menu.appendChild(ul);
-//   menu.appendChild(content1);
-//   menu.appendChild(content2);
-//   menu.appendChild(content3);
-//   menu.appendChild(content4);
-//   menu.appendChild(content5);
-//   menu.appendChild(content6);
-
-//   menu.classList('menu');
-
-// }
 
